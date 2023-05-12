@@ -68,9 +68,14 @@ export class RegisterComponent {
           title: 'Bravo !',
           text: 'Inscription réussie',
         });
-        this.router.navigate(['/']);
+        location.href = '';
       })
-      .catch((err) => console.log(err));
+      .catch((err) =>
+        Swal.fire({
+          title: 'Attention !',
+          text: err.message,
+        })
+      );
   }
   showHidePassword() {
     this.showPassword = !this.showPassword;
