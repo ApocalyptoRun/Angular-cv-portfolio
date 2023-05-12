@@ -1,0 +1,43 @@
+<section class="containeer forms">
+  <div class="form login">
+    <div class="form-content">
+      <header>𝓢𝓮 𝓬𝓸𝓷𝓷𝓮𝓬𝓽𝓮𝓻</header>
+      <form (ngSubmit)="onSubmit()">
+        <div class="field input-field">
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            [(ngModel)]="email"
+            required
+          />
+        </div>
+        <div class="field input-field">
+          <input
+            type="{{ typePassword }}"
+            name="password"
+            placeholder="Mot de passe"
+            [(ngModel)]="password"
+            required
+          />
+          <!-- <input type="password" placeholder="Password" class="password" [(ngModel)]="password" required> -->
+          <i (click)="showHidePassword()" class="bx bx-hide eye-icon"></i>
+        </div>
+        <div class="form-link">
+          <a aria-disabled="true" class="forgot-pass">𝑀𝑜𝓉 𝒹𝑒 𝓅𝒶𝓈𝓈𝑒 𝑜𝓊𝒷𝓁𝒾é? </a>
+        </div>
+        <div class="field button-field">
+          <button type="submit">𝓢𝓮 𝓬𝓸𝓷𝓷𝓮𝓬𝓽𝓮𝓻</button>
+        </div>
+      </form>
+      <div class="form-link">
+        <span
+          >Vous n'avez pas un compte?
+          <a routerLink="/register" class="link signup-link"
+            >𝒮'𝒾𝓃𝓈𝒸𝓇𝒾𝓇𝑒
+          </a></span
+        >
+      </div>
+    </div>
+  </div>
+</section>
