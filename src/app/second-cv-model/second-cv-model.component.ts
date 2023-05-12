@@ -57,7 +57,7 @@ export class SecondCvModelComponent {
         : 'bi bi-github';
   }
   downloadCV() {
-    const pdf = new jsPDF('p', 'pt', [1300, 500]);
+    const pdf = new jsPDF('p', 'pt', [1300, 1500]);
     const content = this.template.nativeElement;
 
     html2canvas(content).then((canvas) => {
